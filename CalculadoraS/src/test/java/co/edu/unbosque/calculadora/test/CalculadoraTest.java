@@ -1,6 +1,7 @@
 
 package co.edu.unbosque.calculadora.test;
 
+import co.edu.unbosque.calculadora.operaciones.OperacionEnum;
 import co.edu.unbosque.calculadora.operaciones.OperacionesCalculadora;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -20,7 +21,7 @@ public class CalculadoraTest {
         OperacionesCalculadora calculadora = new OperacionesCalculadora();
         double ope1 = 12;
         double ope2 = 30;
-        double result = calculadora.operacionB(ope1, ope2);
+        double result = calculadora.operacionB(OperacionEnum.S, ope1, ope2);
         Assert.assertEquals(result, ope2, result, null);
     }
     

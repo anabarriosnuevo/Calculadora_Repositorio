@@ -11,11 +11,31 @@ package co.edu.unbosque.calculadora.operaciones;
  */
 public class OperacionesCalculadora {
     
-    public double operacionB(double ope1, double ope2) {
-        double respuesta = ope1 + ope2;
-        return respuesta;
+    public double operacionB(OperacionEnum op, double ope1, double ope2) {
+        double resultado= 0d;
+        if (op != null){
+            String oper = op.getValue();
+            switch(oper){
+                case "S":
+                    resultado = ope1 + ope2;
+                    break;
+                case "R":
+                    resultado = ope1 - ope2;
+                    break;
+                case "M":
+                    resultado = ope1 * ope2;
+                    break;
+                case "D":
+                    resultado = ope1 / ope2;
+                    break;
+                case "P":
+                    resultado = Math.pow(ope1, ope2);
+                    break;
+            }
+            
+        }
+        return resultado;
     }
-    
     
 }
 
